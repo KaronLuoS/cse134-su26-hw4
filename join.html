@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Join Us</title>
+        <link rel="stylesheet" href="/styles/join_flex.css">
+    </head>
+    </head>
+    <body>
+        <header> 
+            <a href="/" class="logo">
+                <img src="../images/logo.svg" alt="Cheese Society Logo">
+                Cheese Society
+            </a>
+        </header>
+         <nav>    
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                
+                <li class="dropdown-parent">
+                    <a href="./guide/index.html">Cheese Guide</a>
+                    <!-- The nested dropdown menu -->
+                    <ul class="dropdown-menu">
+                        <li><a href="/guide/fresh.html">Fresh</a></li>
+                        <li><a href="/guide/soft.html">Soft</a></li>
+                        <li><a href="guide/blue.html">Blue</a></li>
+                        <li><a href="guide/hard.html">Hard</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="about.html">About</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+        <main>   
+            <h1>Join The CSE Cheese Society</h1>
+            <p>Membership is free, meetings are monthly, and the cheese is real. Fill out the form and the Keeper of the Cave will be in touch.</p>
+            
+            <form action="/join-society" method="post">
+                <p>
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="family">Which family calls to you?</label><br>
+                    <select id="family" name="family">
+                        <option value="" disabled selected>Select a family...</option>
+                        <option value="fresh">Fresh</option>
+                        <option value="soft-ripened">Soft-ripened</option>
+                        <option value="blue">Blue</option>
+                        <option value="hard">Hard</option>
+                        <option value="undecided">Undecided — that's why I'm here</option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Which of these have you tasted?</legend>
+                    
+                    <label>
+                        <input type="checkbox" name="tasted" value="brie"> Brie
+                    </label><br>
+                    
+                    <label>
+                        <input type="checkbox" name="tasted" value="roquefort"> Roquefort
+                    </label><br>
+                    
+                    <label>
+                        <input type="checkbox" name="tasted" value="aged-gouda"> Aged Gouda
+                    </label>
+                </fieldset>
+
+                <p>
+                    <label for="favorite-cheese">Tell us your favorite cheese</label><br>
+                    <input type="text" id="favorite-cheese" name="favorite_cheese" placeholder="e.g. Comte">
+                </p>
+
+                <p>
+                    <button type="submit">Sign me up</button>
+                </p>
+
+            </form>
+
+            <button type="button" commandfor="why-join-dialog" command="show-modal">Why join?</button>
+            <dialog id="why-join-dialog">
+            <h2>Why join?</h2>
+            
+            <ul>
+                <li>Monthly tastings. The Society buys the cheese. You bring opinions.</li>
+                <li>Voting rights in the Cheese of the Month election.</li>
+                <li>Access to THE CAVE (a mini-fridge, but a very serious one).</li>
+                <li>A laminated membership card featuring the cheese of your choice.</li>
+                <li>Amnesty program for recovering blue-cheese skeptics.</li>
+            </ul>
+
+            <button type="button" commandfor="why-join-dialog" command="close">
+                I'm convinced
+            </button>
+        </dialog>
+        </main>
+        <footer>
+             Copyright 2026 <a href="https://tpowell.craft.me/3yV11jeP0F6sAl">CSE Cheese Society</a>. Cheese responsibly.
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+}
+
+.morph-blue {
+    view-transition-name: active-cheese-blue;
+}
+
+.morph-hard {
+    view-transition-name: active-cheese-hard;
+}
+
+.morph-soft {
+    view-transition-name: active-cheese-soft;
+}
+
+.morph-fresh {
+    view-transition-name: active-cheese-fresh;
+}
+
+header a { 
+    display: flex;
+    gap: var(--space-1); 
+
+    img{
+        width: var(--image-3);
+        height: auto;
+        display: block; 
+    }
+}

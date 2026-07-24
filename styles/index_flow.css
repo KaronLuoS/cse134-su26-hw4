@@ -1,0 +1,77 @@
+ @layer token, global, site, page;
+
+ @import "tokens.css" layer(token);
+ @import "global.css" layer(global);
+ @import "site.css" layer(site);
+
+
+ @layer page {
+    body {
+        padding: var(--space-3);
+
+        > nav{
+
+            padding: var(--space-2) var(--space-4);
+
+            > ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            }
+
+            .dropdown-parent {
+            position: relative;
+            }
+
+            .dropdown-menu {
+            display: none;
+            /* position: absolute; */
+            /* top: 100%;
+            left: 0; */
+            white-space: nowrap; 
+            }
+
+            .dropdown-parent:hover .dropdown-menu,
+            .dropdown-parent:focus-within .dropdown-menu {
+            display: block;
+            }
+        }
+
+    }
+
+    section {
+        p {
+        padding: var(--space-2);
+        border: var(--border);
+        background: var(--panel);
+        }
+
+        strong,
+        em {
+        background: var(--paper);
+        outline: var(--border-width) var(--border-style) var(--accent);
+        }
+    }
+
+    article {
+        max-width: var(--measure);
+        margin-inline: auto;
+        padding: var(--space-2) var(--space-3);
+        border-inline-start: var(--rule);
+        background: var(--panel);
+    }
+
+    dt a {
+        display: flex;
+        gap:var(--space-1);
+    }
+
+    dt img {
+        width:var(--image-2);
+        height: auto;
+    }
+
+    footer {
+        text-align: center;
+    }
+}

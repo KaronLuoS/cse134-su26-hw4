@@ -1,0 +1,56 @@
+ @layer token, global, site, page;
+
+ @import "tokens.css" layer(token);
+ @import "global.css" layer(global);
+ /* @import "site.css" layer(site); */
+
+
+ @layer page {
+    body {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+        grid-template-rows: auto auto 1fr auto;
+        min-height: 100svh;
+
+        > header {
+        grid-area: header;
+        padding: var(--space-2) var(--space-3);
+        border-block-end: var(--border);
+        background: var(--panel);
+        }
+
+        > nav {
+        grid-area: nav;
+        background: var(--panel);
+        padding: var(--space-2) var(--space-4);
+            >ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            }
+            >a {
+            padding:var(--space-1) var(--space-4);
+            }
+        }
+
+        > main {
+        grid-area: main;
+        padding: var(--space-3);
+
+            >.hero {
+            width:var(--image-5);
+            }
+        }
+
+        > footer {
+        grid-area: footer;
+        padding: var(--space-2) var(--space-3);
+        border-block-start: var(--border);
+        background: var(--panel);
+        }
+    }
+ }

@@ -1,0 +1,63 @@
+ @layer token, global, site, page;
+
+ @import "tokens.css" layer(token);
+ @import "global.css" layer(global);
+ @import "site.css" layer(site);
+
+
+ @layer page {
+    body {
+        --figure-width: 11rem;
+        --figure-height: 14rem;
+
+        margin-inline: auto;
+        text-align: center;
+
+        > nav{
+
+            padding: var(--space-2) var(--space-4);
+
+            > ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            }
+
+            .dropdown-parent {
+            position: relative;
+            }
+
+            .dropdown-menu {
+            display: none;
+            white-space: nowrap; 
+            }
+
+            .dropdown-parent:hover .dropdown-menu,
+            .dropdown-parent:focus-within .dropdown-menu {
+            display: block;
+            }
+        }
+
+        main img {
+            width: 50rem;
+        }
+        article {
+            figure {
+            float: left;
+            width: var(--figure-width);
+            min-height: var(--figure-height);
+            margin: 0 var(--space-2) var(--space-1) 0;
+            padding: var(--space-2);
+            border: var(--border);
+            background: var(--panel);
+            }
+        }
+
+        > footer {
+        clear: both;
+        padding: var(--space-2);
+        border-block-start: var(--rule);
+        background: var(--panel);
+        }
+    }
+ }

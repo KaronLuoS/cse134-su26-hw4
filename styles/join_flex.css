@@ -1,0 +1,66 @@
+ @layer token, global, site, page;
+
+ @import "tokens.css" layer(token);
+ @import "global.css" layer(global);
+ @import "site.css" layer(site);
+
+
+ @layer page {
+ body {
+        --card-width: 28rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100svh;
+
+        > header {
+        padding: var(--space-2) var(--space-3);
+        border-block-end: var(--border);
+        background: var(--panel);
+        }
+
+        > main {
+        flex:1;
+        align-self: center;
+        max-width: var(--card-width);
+        padding: var(--space-3);
+        border: var(--border);
+        border-block-start: var(--rule);
+        background: var(--panel);
+        margin:var(--space-2) 0 var(--space-4) 0;
+        }
+
+        > nav{
+
+            padding: var(--space-2) var(--space-4);
+
+            > ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            }
+
+            .dropdown-parent {
+            position: relative;
+            }
+
+            .dropdown-menu {
+            display: none;
+            white-space: nowrap; 
+            }
+
+            .dropdown-parent:hover .dropdown-menu,
+            .dropdown-parent:focus-within .dropdown-menu {
+            display: block;
+            }
+        }
+
+        > footer {
+        padding: var(--space-2) var(--space-3);
+        border-block-start: var(--border);
+        background: var(--panel);
+        }
+
+    }
+}
