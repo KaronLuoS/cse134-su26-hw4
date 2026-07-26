@@ -1,8 +1,7 @@
- @layer token, global, site, page;
+ @layer token, global, page;
 
  @import "tokens.css" layer(token);
  @import "global.css" layer(global);
- @import "site.css" layer(site);
 
 
  @layer page {
