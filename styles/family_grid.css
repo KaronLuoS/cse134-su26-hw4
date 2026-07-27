@@ -21,21 +21,31 @@
         border-block-end: var(--border);
         background: var(--panel);
         }
+        > nav{
 
-        > nav {
-        grid-area: nav;
-        background: var(--panel);
-        padding: var(--space-2) var(--space-4);
-            >ul {
+            padding: var(--space-2) var(--space-4);
+            background: var(--panel);
+
+            > ul {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             }
-            >a {
-            padding:var(--space-1) var(--space-4);
+
+            .dropdown-parent {
+            position: relative;
+            }
+
+            .dropdown-menu {
+            display: none;
+            white-space: nowrap; 
+            }
+
+            .dropdown-parent:hover .dropdown-menu,
+            .dropdown-parent:focus-within .dropdown-menu {
+            display: block;
             }
         }
-
         > main {
         grid-area: main;
         padding: var(--space-3);
@@ -43,6 +53,19 @@
             >.hero {
             width:var(--image-5);
             }
+
+            > nav {
+                grid-area: nav;
+                padding: var(--space-2) var(--space-4);
+                >ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                }
+                >a {
+                padding:var(--space-1) var(--space-4);
+                }
+        }
         }
 
         > footer {
