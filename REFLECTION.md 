@@ -1,0 +1,12 @@
+I have to repeat a lot of the same HTML structure by hand, especially when the homework assignment requires that we have the same `<header>` `<main>` `<footer>` and `<nav>` in all of our pages. Especially for the four family pages, their overall structure is identical, but I still had to copy and paste the same layout and then change the content for each page. 
+
+Another thing that isn't quite fun is that after I had already built something that I reuse in several pages, I figure that I want to change it because some new unforseen things come up and I want to add things to it. For example, I spent a long time deciding how to implement the hero image because I wanted to use the most appropriate semantic HTML element. After experimenting with different options and running my pages through the validator, I realized that a simple `<div>` made more sense since the page didn't actually have a header section for the hero (and they give me warning for using `<section>`). By that point, I had already use the wrong tag for all pages, so I had to redo the same changes across all four family pages, and that did take some time.
+
+The navigation bar and footer were yet the biggest source of repetition. Since I was developing the CSS as I built the site, I kept adjusting the navigation structure and styling, like adding sub-navigation list for the guide family, attempting to put the home navigation on the logo, and other attemps. Every time I changed something, I had to copy those updates into every HTML file. 
+
+I also have to make more changes to the nav bar when I forgot to use the correct relative URLs for the pages inside the `guide` folder. After noticing the mistake, I had to fix the same set of links across multiple files, updating eight URLs in each of five HTML pages. It wasn't difficult work, but it was tedious and easy to make another mistake while fixing it, and that is after I figure that I have to use the same nav bar for the families, not just previous and next page (or maybe those navigation should go somewhere else?).
+
+
+The `<head>` section was also repetitive meta data tags, and since I used the same content in `<footer>`, I also have to copy them through all the pages.
+
+A static site generator would defintely solve most of these problems. I would want shared templates for the navigation, footer, and page head, along with reusable layouts for the family pages, so I could make changes once instead of updating every file manually.
