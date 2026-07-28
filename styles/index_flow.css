@@ -1,19 +1,19 @@
- @layer token, global, page;
+ @layer token, global, site, page;
 
  @import "tokens.css" layer(token);
  @import "global.css" layer(global);
+ @import "site.css" layer(site);
 
 
  @layer page {
     body {
         padding: var(--space-3);
 
-        > nav{
+        /* > nav{
 
             padding: var(--space-2) var(--space-4);
 
             > ul {
-            display: flex;
             flex-direction: row;
             justify-content: space-between;
             }
@@ -31,7 +31,7 @@
             .dropdown-parent:focus-within .dropdown-menu {
             display: block;
             }
-        }
+        } */
 
     }
 
