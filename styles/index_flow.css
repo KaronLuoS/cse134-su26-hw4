@@ -34,7 +34,6 @@
     }
 
     dt a {
-        display: flex;
         gap:var(--space-1);
     }
 
