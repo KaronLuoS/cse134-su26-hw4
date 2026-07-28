@@ -9,30 +9,6 @@
     body {
         padding: var(--space-3);
 
-        /* > nav{
-
-            padding: var(--space-2) var(--space-4);
-
-            > ul {
-            flex-direction: row;
-            justify-content: space-between;
-            }
-
-            .dropdown-parent {
-            position: relative;
-            }
-
-            .dropdown-menu {
-            display: none;
-            white-space: nowrap; 
-            }
-
-            .dropdown-parent:hover .dropdown-menu,
-            .dropdown-parent:focus-within .dropdown-menu {
-            display: block;
-            }
-        } */
-
     }
 
     section {
