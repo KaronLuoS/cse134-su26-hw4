@@ -50,7 +50,7 @@
         grid-area: main;
         padding: var(--space-3);
 
-            >.hero {
+            hero-img img {
             width:var(--image-5);
             }
 
